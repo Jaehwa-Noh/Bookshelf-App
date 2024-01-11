@@ -25,3 +25,7 @@ there are 2 additional branchs for 1 practice, Compose and SwiftUI.
 This app shows books list to user using the Google Books API. (이 앱은 Google Books API를 사용하여 사용자에게 책 목록을 보여주는 앱입니다.)
 
 
+## UI specifications (UI 명세서)
+### Full screen (전체 화면)
+<img width="300" alt="Full screen of Bookshelf app (책장 앱 전체 화면)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/d1cf46e7-104a-4e08-8ff0-e7d1fca52029">
+
