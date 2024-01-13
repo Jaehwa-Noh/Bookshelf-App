@@ -4,7 +4,7 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-bookshelf
 Practice makes a master.   
 This main branch is the main directory.   
 
-there are 2 branchs for 1 practice, Compose and SwiftUI.   
+There are 2 branchs for 1 practice, Compose and SwiftUI.   
    
 • [Compose branch](https://github.com/Jaehwa-Noh/Project-Bookshelf-App/tree/compose-bookshelf-app)   
 • [SwiftUI branch]   
