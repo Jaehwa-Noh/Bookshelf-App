@@ -1,5 +1,6 @@
 package com.example.bookshelfapp.ui
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -20,7 +21,9 @@ fun BookshelfApp(modifier: Modifier = Modifier) {
             BookshelfAppBar()
         }
     ) {
-
+        BookshelfListScreen(
+            modifier = Modifier.padding(it)
+        )
     }
 }
 
