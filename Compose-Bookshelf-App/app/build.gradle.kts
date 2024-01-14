@@ -57,6 +57,11 @@ android {
 
 dependencies {
 
+    implementation("io.ktor:ktor-client-core:2.3.7")
+    implementation("io.ktor:ktor-client-okhttp:2.3.7")
+//    darwin for iOS
+//    implementation("io.ktor:ktor-client-darwin:2.3.7")
+
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-android-compiler:2.50")
 
