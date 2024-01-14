@@ -30,7 +30,7 @@ This app shows books list to user using the Google Books API. (이 앱은 Google
 <img width="300" alt="Full screen of Bookshelf app (책장 앱 전체 화면)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/d1cf46e7-104a-4e08-8ff0-e7d1fca52029">
 
 ## Network API specifications (네트워크 API 명세서)
-### Google Books API v1
+### [Google Books API v1](https://developers.google.com/books/docs/v1/using#PerformingSearch)
 URI: https://www.googleapis.com/books/v1/volumes?q=search+terms
 #### Response (응답)
 ```html
