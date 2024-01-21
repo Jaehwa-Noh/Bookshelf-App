@@ -11,6 +11,7 @@ import io.ktor.client.request.get
 import io.ktor.http.URLProtocol
 import io.ktor.http.path
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.serialization.json.Json
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -23,7 +24,11 @@ class GoogleBookApi @Inject constructor() : GoogleBookApiService {
     //    private val baseUrl = "https://www.googleapis.com/books/v1/volumes?q=search+terms"
     private val client = HttpClient(OkHttp) {
         install(ContentNegotiation) {
-            json()
+            json(
+                Json {
+                    ignoreUnknownKeys = true
+                }
+            )
         }
         defaultRequest {
             url {
