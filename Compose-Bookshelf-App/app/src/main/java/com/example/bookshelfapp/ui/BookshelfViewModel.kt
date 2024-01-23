@@ -10,6 +10,7 @@ sealed interface BookShelfUiState {
 }
 
 data class BooksUiModel(
+    val id: String,
     val title: String,
     val url: String
 )
