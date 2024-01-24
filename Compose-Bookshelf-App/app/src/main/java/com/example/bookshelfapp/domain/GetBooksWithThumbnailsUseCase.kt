@@ -1,6 +1,7 @@
 package com.example.bookshelfapp.domain
 
 import com.example.bookshelfapp.data.BooksRepository
+import com.example.bookshelfapp.di.DispatcherDefault
 import com.example.bookshelfapp.ui.BooksUiModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
@@ -8,7 +9,7 @@ import javax.inject.Inject
 
 class GetBooksWithThumbnailsUseCase @Inject constructor(
     private val booksRepository: BooksRepository,
-    private val defaultDispatcher: CoroutineDispatcher,
+    @DispatcherDefault private val defaultDispatcher: CoroutineDispatcher,
     private val getBookIdUseCase: GetBookIdUseCase
 ) {
     suspend operator fun invoke(searchTerms: String): List<BooksUiModel> {

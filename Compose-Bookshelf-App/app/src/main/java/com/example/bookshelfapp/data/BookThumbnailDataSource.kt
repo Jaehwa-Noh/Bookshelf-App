@@ -1,5 +1,6 @@
 package com.example.bookshelfapp.data
 
+import com.example.bookshelfapp.di.DispatcherIO
 import com.example.bookshelfapp.model.GoogleBookRetrieveApiModel
 import com.example.bookshelfapp.network.GoogleBookApiService
 import kotlinx.coroutines.CoroutineDispatcher
@@ -14,7 +15,7 @@ interface BookThumbnailDataSource {
 @Singleton
 class BookThumbnailNetworkDataSource @Inject constructor(
     private val googleBookApiService: GoogleBookApiService,
-    private val ioDispatcher: CoroutineDispatcher
+    @DispatcherIO private val ioDispatcher: CoroutineDispatcher
 ) : BookThumbnailDataSource {
     override suspend fun getThumbnails(bookId: String): GoogleBookRetrieveApiModel {
         return withContext(ioDispatcher) {
