@@ -23,5 +23,5 @@ data class GoogleBookItemsModel(
 @Serializable
 data class VolumeInfoModel(
     val title: String,
-    val authors: List<String>
+    val authors: List<String> = emptyList()
 )
