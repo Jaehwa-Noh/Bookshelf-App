@@ -4,6 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.bookshelfapp.domain.GetBooksWithThumbnailsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import io.ktor.client.plugins.ResponseException
+import io.ktor.utils.io.errors.IOException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -29,7 +31,9 @@ class BookshelfViewModel @Inject constructor(
                 BookShelfUiState.Success(
                     getBooksWithThumbnailsUseCase("다이아몬드는 개똥밭에 굴러도 다이아몬드이다.")
                 )
-            } catch (e: Error) {
+            } catch (e: IOException) {
+                BookShelfUiState.Error(e.localizedMessage ?: "Error")
+            } catch (e: ResponseException) {
                 BookShelfUiState.Error(e.localizedMessage ?: "Error")
             }
         }
