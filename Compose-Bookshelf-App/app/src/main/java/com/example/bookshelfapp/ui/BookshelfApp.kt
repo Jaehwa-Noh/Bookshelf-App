@@ -8,22 +8,37 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.bookshelfapp.R
+import com.example.bookshelfapp.ui.network_result.ErrorScreen
+import com.example.bookshelfapp.ui.network_result.LoadingScreen
 
 @Composable
 fun BookshelfApp(modifier: Modifier = Modifier) {
+    val bookshelfViewModel: BookshelfViewModel = viewModel()
+    val bookshelfUiState = bookshelfViewModel.booksUiState.collectAsState()
+
     Scaffold(
         modifier = modifier,
         topBar = {
             BookshelfAppBar()
         }
     ) {
-        BookshelfListScreen(
-            modifier = Modifier.padding(it)
-        )
+        when (bookshelfUiState.value) {
+            is BookShelfUiState.Error -> ErrorScreen(
+                error = (bookshelfUiState.value as BookShelfUiState.Error).error
+            )
+
+            is BookShelfUiState.Loading -> LoadingScreen()
+            is BookShelfUiState.Success -> BookshelfListScreen(
+                modifier = Modifier.padding(it)
+            )
+        }
+
     }
 }
 
