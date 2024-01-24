@@ -9,7 +9,7 @@ data class GoogleBookRetrieveApiModel(
 
 @Serializable
 data class RetrieveVolumeInfoModel(
-    val imageLinks: ThumbnailModel
+    val imageLinks: ThumbnailModel? = null
 )
 
 @Serializable
