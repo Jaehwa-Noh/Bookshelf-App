@@ -35,7 +35,7 @@ class GoogleBookApi @Inject constructor() : GoogleBookApiService {
         defaultRequest {
             url {
                 protocol = URLProtocol.HTTPS
-                host = "https://www.googleapis.com/books/v1"
+                host = "www.googleapis.com/books/v1"
             }
         }
         expectSuccess = true
