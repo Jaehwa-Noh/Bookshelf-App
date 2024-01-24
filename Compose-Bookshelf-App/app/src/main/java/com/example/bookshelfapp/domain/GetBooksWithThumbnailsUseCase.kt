@@ -21,7 +21,7 @@ class GetBooksWithThumbnailsUseCase @Inject constructor(
                         .getThumbnails(bookId = getBookIdUseCase(bookModel.selfLink))
                         .volumeInfo
                         .imageLinks
-                        .thumbnail
+                        ?.thumbnail ?: ""
 
                 BooksUiModel(
                     id = bookModel.id,
