@@ -1,13 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
     id("com.google.dagger.hilt.android")
     kotlin("plugin.serialization")
-}
-
-kapt {
-    correctErrorTypes = true
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -69,7 +65,7 @@ dependencies {
 //    implementation("io.ktor:ktor-client-darwin:2.3.7")
 
     implementation("com.google.dagger:hilt-android:2.50")
-    kapt("com.google.dagger:hilt-android-compiler:2.50")
+    ksp("com.google.dagger:hilt-android-compiler:2.50")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
