@@ -1,5 +1,6 @@
 package com.example.bookshelfapp.ui
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -30,13 +31,27 @@ fun BookshelfApp(modifier: Modifier = Modifier) {
     ) {
         when (bookshelfUiState.value) {
             is BookShelfUiState.Error -> ErrorScreen(
-                error = (bookshelfUiState.value as BookShelfUiState.Error).error
+                error = (bookshelfUiState.value as BookShelfUiState.Error).error,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
             )
 
-            is BookShelfUiState.Loading -> LoadingScreen()
-            is BookShelfUiState.Success -> BookshelfListScreen(
-                modifier = Modifier.padding(it)
+            is BookShelfUiState.Loading -> LoadingScreen(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
             )
+
+            is BookShelfUiState.Success -> {
+                val books = (bookshelfUiState.value as BookShelfUiState.Success).books
+                BookshelfListScreen(
+                    modifier = Modifier
+                        .padding(it)
+                        .fillMaxSize(),
+                    books = books
+                )
+            }
         }
 
     }
