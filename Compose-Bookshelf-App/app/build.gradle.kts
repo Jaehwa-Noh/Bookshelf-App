@@ -54,6 +54,8 @@ android {
 
 dependencies {
 
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 
     implementation("io.ktor:ktor-client-content-negotiation:2.3.7")
