@@ -65,11 +65,13 @@ class BookshelfViewModelTest {
 
     @Test
     fun bookshelfViewModelTest_LoadingSuccess_BookUiStateIsSuccessSuccess() {
+        Thread.sleep(300)
         assertTrue(bookshelfViewModel.booksUiState.value is BookShelfUiState.Success)
     }
 
     @Test
     fun bookshelfViewModelTest_LoadingSuccess_BookUiStateValueCheckSuccess() {
+        Thread.sleep(300)
         assertTrue(bookshelfViewModel.booksUiState.value is BookShelfUiState.Success)
 
         val books = (bookshelfViewModel.booksUiState.value as BookShelfUiState.Success).books
