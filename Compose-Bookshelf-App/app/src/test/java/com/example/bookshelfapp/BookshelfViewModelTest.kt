@@ -26,30 +26,26 @@ import org.junit.Test
 
 class BookshelfViewModelTest {
     private lateinit var bookshelfViewModel: BookshelfViewModel
-    private lateinit var getBooksWithThumbnailsUseCase: GetBooksWithThumbnailsUseCase
-    private lateinit var booksRepository: BooksRepository
-    private lateinit var getBookIdUseCase: GetBookIdUseCase
-    private lateinit var setHttpsUseCase: SetHttpsUseCase
 
     @get:Rule
     val testDispatcher = TestDispatcherRule()
 
     @Before
     fun createBookshelfViewModel() {
-        getBookIdUseCase = GetBookIdUseCase(
+        val getBookIdUseCase = GetBookIdUseCase(
             defaultDispatcher = Dispatchers.Default
         )
 
-        booksRepository = BooksRepository(
+        val booksRepository = BooksRepository(
             booksDataSource = BooksFakeDataSource(),
             thumbnailDataSource = ThumbnailFakeDataSource()
         )
 
-        setHttpsUseCase = SetHttpsUseCase(
+        val setHttpsUseCase = SetHttpsUseCase(
             defaultDispatcher = Dispatchers.Default
         )
 
-        getBooksWithThumbnailsUseCase = GetBooksWithThumbnailsUseCase(
+        val getBooksWithThumbnailsUseCase = GetBooksWithThumbnailsUseCase(
             booksRepository = booksRepository,
             defaultDispatcher = Dispatchers.Default,
             getBookIdUseCase = getBookIdUseCase,
