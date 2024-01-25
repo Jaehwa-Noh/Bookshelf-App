@@ -54,6 +54,15 @@ android {
 
 dependencies {
 
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0-RC2")
+    // For instrumentation tests
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.50")
+    kspAndroidTest("com.google.dagger:hilt-compiler:2.50")
+
+    // For local unit tests
+    testImplementation("com.google.dagger:hilt-android-testing:2.50")
+    kspTest("com.google.dagger:hilt-compiler:2.50")
+
     implementation("io.coil-kt:coil-compose:2.5.0")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
