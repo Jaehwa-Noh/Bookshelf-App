@@ -2,8 +2,10 @@ package com.example.bookshelfapp
 
 import androidx.activity.compose.setContent
 import androidx.compose.ui.test.ExperimentalTestApi
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.bookshelfapp.ui.BookshelfApp
 import com.example.bookshelfapp.ui.theme.BookshelfAppTheme
@@ -48,5 +50,17 @@ class BookshelfAppScreenTest {
         )
     }
 
+    @Test
+    fun bookListScreen_ShowList_BooksListDisplaySuccess() {
+        navigateToList()
+        val myBook = composeTestRule.onNodeWithText("다이아몬드는 개똥밭에 굴러도 다이아몬드이다")
+        myBook.assertIsDisplayed()
+    }
 
+    @OptIn(ExperimentalTestApi::class)
+    private fun navigateToList() {
+        composeTestRule.waitUntilDoesNotExist(
+            hasTestTag("tag_loading"), 10_000L
+        )
+    }
 }
