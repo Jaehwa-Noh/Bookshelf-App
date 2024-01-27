@@ -9,13 +9,10 @@ import SwiftUI
 
 struct BookshelfApp: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            BookshelfListView()
+            .navigationTitle("Book shelf")
         }
-        .padding()
     }
 }
 
