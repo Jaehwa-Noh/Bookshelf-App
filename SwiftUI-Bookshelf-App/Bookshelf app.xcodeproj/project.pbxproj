@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF5546EC2B64F03C00A68E4C /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = CF5546EB2B64F03C00A68E4C /* Factory */; };
 		CF87E0AB2B64ECEA00538D88 /* Bookshelf_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87E0AA2B64ECEA00538D88 /* Bookshelf_appApp.swift */; };
 		CF87E0AD2B64ECEA00538D88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87E0AC2B64ECEA00538D88 /* ContentView.swift */; };
 		CF87E0AF2B64ECEB00538D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF87E0AE2B64ECEB00538D88 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5546EC2B64F03C00A68E4C /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "Bookshelf app";
+			packageProductDependencies = (
+				CF5546EB2B64F03C00A68E4C /* Factory */,
+			);
 			productName = "Bookshelf app";
 			productReference = CF87E0A72B64ECEA00538D88 /* Bookshelf app.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = CF87E09E2B64ECEA00538D88;
+			packageReferences = (
+				CF5546EA2B64F03C00A68E4C /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			productRefGroup = CF87E0A82B64ECEA00538D88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF5546EA2B64F03C00A68E4C /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF5546EB2B64F03C00A68E4C /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF5546EA2B64F03C00A68E4C /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF87E09F2B64ECEA00538D88 /* Project object */;
 }
