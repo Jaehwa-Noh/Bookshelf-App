@@ -34,7 +34,8 @@ fun BookshelfApp(modifier: Modifier = Modifier) {
                 error = (bookshelfUiState.value as BookShelfUiState.Error).error,
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(it)
+                    .padding(it),
+                onRetryButtonClick = { bookshelfViewModel.getBooks() }
             )
 
             is BookShelfUiState.Loading -> LoadingScreen(

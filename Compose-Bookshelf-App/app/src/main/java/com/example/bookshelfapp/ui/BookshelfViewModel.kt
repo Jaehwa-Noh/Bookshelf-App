@@ -24,7 +24,7 @@ class BookshelfViewModel @Inject constructor(
         getBooks()
     }
 
-    private fun getBooks() {
+    fun getBooks() {
         viewModelScope.launch {
             _booksUiState.value = BookShelfUiState.Loading
             _booksUiState.value = try {
