@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2C65D22B65128700BF682B /* BookshelfListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C65D12B65128700BF682B /* BookshelfListView.swift */; };
+		CF2C65D52B65140900BF682B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C65D42B65140900BF682B /* ErrorView.swift */; };
+		CF2C65D72B65141400BF682B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C65D62B65141400BF682B /* LoadingView.swift */; };
+		CF2C65D92B65158700BF682B /* BookshelfViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C65D82B65158700BF682B /* BookshelfViewModel.swift */; };
 		CF5546EC2B64F03C00A68E4C /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = CF5546EB2B64F03C00A68E4C /* Factory */; };
 		CF5546EF2B64F09900A68E4C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF5546EE2B64F09900A68E4C /* Alamofire */; };
 		CF87E0AB2B64ECEA00538D88 /* Bookshelf_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87E0AA2B64ECEA00538D88 /* Bookshelf_appApp.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF2C65D12B65128700BF682B /* BookshelfListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfListView.swift; sourceTree = "<group>"; };
+		CF2C65D42B65140900BF682B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		CF2C65D62B65141400BF682B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CF2C65D82B65158700BF682B /* BookshelfViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfViewModel.swift; sourceTree = "<group>"; };
 		CF87E0A72B64ECEA00538D88 /* Bookshelf app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookshelf app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF87E0AA2B64ECEA00538D88 /* Bookshelf_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookshelf_appApp.swift; sourceTree = "<group>"; };
 		CF87E0AC2B64ECEA00538D88 /* BookshelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfApp.swift; sourceTree = "<group>"; };
@@ -36,6 +44,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF2C65D02B65126200BF682B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C65D32B6513F700BF682B /* Network result */,
+				CF87E0AC2B64ECEA00538D88 /* BookshelfApp.swift */,
+				CF2C65D12B65128700BF682B /* BookshelfListView.swift */,
+				CF2C65D82B65158700BF682B /* BookshelfViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CF2C65D32B6513F700BF682B /* Network result */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C65D42B65140900BF682B /* ErrorView.swift */,
+				CF2C65D62B65141400BF682B /* LoadingView.swift */,
+			);
+			path = "Network result";
+			sourceTree = "<group>";
+		};
+		CF2C65DA2B651B6400BF682B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CF87E09E2B64ECEA00538D88 = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +90,9 @@
 		CF87E0A92B64ECEA00538D88 /* Bookshelf app */ = {
 			isa = PBXGroup;
 			children = (
+				CF2C65DA2B651B6400BF682B /* Model */,
+				CF2C65D02B65126200BF682B /* UI */,
 				CF87E0AA2B64ECEA00538D88 /* Bookshelf_appApp.swift */,
-				CF87E0AC2B64ECEA00538D88 /* BookshelfApp.swift */,
 				CF87E0AE2B64ECEB00538D88 /* Assets.xcassets */,
 				CF87E0B02B64ECEB00538D88 /* Preview Content */,
 			);
@@ -149,8 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2C65D22B65128700BF682B /* BookshelfListView.swift in Sources */,
 				CF87E0AD2B64ECEA00538D88 /* BookshelfApp.swift in Sources */,
+				CF2C65D92B65158700BF682B /* BookshelfViewModel.swift in Sources */,
 				CF87E0AB2B64ECEA00538D88 /* Bookshelf_appApp.swift in Sources */,
+				CF2C65D72B65141400BF682B /* LoadingView.swift in Sources */,
+				CF2C65D52B65140900BF682B /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
