@@ -78,4 +78,13 @@ class BookshelfViewModelTest {
             BooksUiModel(id = "id1", title = "title1", url = "thumbnail")
         )
     }
+    
+    @Test
+    fun bookshelfViewModelTest_getBook_BookUiStateValueCheckSuccess() {
+        Thread.sleep(300)
+        assertTrue(bookshelfViewModel.booksUiState.value is BookShelfUiState.Success)
+        bookshelfViewModel.getBooks()
+        Thread.sleep(300)
+        assertTrue(bookshelfViewModel.booksUiState.value is BookShelfUiState.Success)
+    }
 }
