@@ -20,6 +20,12 @@ extension Container {
         }
         .singleton
     }
+    
+    var userInitiated: Factory<TaskPriority> {
+        self {
+            .userInitiated
+        }
+    }
 }
 
 
