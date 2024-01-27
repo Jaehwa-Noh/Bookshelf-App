@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF5546EC2B64F03C00A68E4C /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = CF5546EB2B64F03C00A68E4C /* Factory */; };
+		CF5546EF2B64F09900A68E4C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF5546EE2B64F09900A68E4C /* Alamofire */; };
 		CF87E0AB2B64ECEA00538D88 /* Bookshelf_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87E0AA2B64ECEA00538D88 /* Bookshelf_appApp.swift */; };
 		CF87E0AD2B64ECEA00538D88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87E0AC2B64ECEA00538D88 /* ContentView.swift */; };
 		CF87E0AF2B64ECEB00538D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF87E0AE2B64ECEB00538D88 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF5546EC2B64F03C00A68E4C /* Factory in Frameworks */,
+				CF5546EF2B64F09900A68E4C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,7 @@
 			name = "Bookshelf app";
 			packageProductDependencies = (
 				CF5546EB2B64F03C00A68E4C /* Factory */,
+				CF5546EE2B64F09900A68E4C /* Alamofire */,
 			);
 			productName = "Bookshelf app";
 			productReference = CF87E0A72B64ECEA00538D88 /* Bookshelf app.app */;
@@ -118,6 +121,7 @@
 			mainGroup = CF87E09E2B64ECEA00538D88;
 			packageReferences = (
 				CF5546EA2B64F03C00A68E4C /* XCRemoteSwiftPackageReference "Factory" */,
+				CF5546ED2B64F09900A68E4C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = CF87E0A82B64ECEA00538D88 /* Products */;
 			projectDirPath = "";
@@ -364,6 +368,14 @@
 				minimumVersion = 2.3.1;
 			};
 		};
+		CF5546ED2B64F09900A68E4C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -371,6 +383,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CF5546EA2B64F03C00A68E4C /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		CF5546EE2B64F09900A68E4C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF5546ED2B64F09900A68E4C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
