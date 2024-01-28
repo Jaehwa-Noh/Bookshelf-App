@@ -10,6 +10,7 @@ import Alamofire
 
 protocol GoogleBookApiService {
     func getBooks(searchTerm: String) async throws -> GoogleBookApiModel
+    func getThumbnail(bookId: String) async throws -> GoogleBookRetrieveApiModel
 }
 
 struct GoogleBookApi: GoogleBookApiService {
