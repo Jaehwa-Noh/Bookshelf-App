@@ -8,7 +8,12 @@
 import Factory
 
 extension Container {
-    var bookThumbnailDataSource: Factory<
+    var bookThumbnailDataSource: Factory<BookThumbnailDataSource> {
+        self {
+            BookThumbnailNetworkDataSource()
+        }
+        .singleton
+    }
     
     var booksDataSource: Factory<BooksDataSource> {
         self {
