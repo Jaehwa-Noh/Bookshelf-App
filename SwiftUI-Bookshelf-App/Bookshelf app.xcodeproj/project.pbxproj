@@ -26,6 +26,8 @@
 		CF87E0AD2B64ECEA00538D88 /* BookshelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF87E0AC2B64ECEA00538D88 /* BookshelfApp.swift */; };
 		CF87E0AF2B64ECEB00538D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF87E0AE2B64ECEB00538D88 /* Assets.xcassets */; };
 		CF87E0B22B64ECEB00538D88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF87E0B12B64ECEB00538D88 /* Preview Assets.xcassets */; };
+		CFED633F2B662C2600EE1633 /* GetBookIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFED633E2B662C2600EE1633 /* GetBookIdUseCase.swift */; };
+		CFED63422B6694A200EE1633 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFED63412B6694A200EE1633 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		CF87E0AC2B64ECEA00538D88 /* BookshelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfApp.swift; sourceTree = "<group>"; };
 		CF87E0AE2B64ECEB00538D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF87E0B12B64ECEB00538D88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFED633E2B662C2600EE1633 /* GetBookIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookIdUseCase.swift; sourceTree = "<group>"; };
+		CFED63412B6694A200EE1633 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			children = (
 				CF2C65E02B65380500BF682B /* GetBooksWithThumbnailUseCase.swift */,
 				CF46BAD92B6629BC00EC0407 /* SetHttpsUseCase.kt.swift */,
+				CFED633E2B662C2600EE1633 /* GetBookIdUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 		CF87E0A92B64ECEA00538D88 /* Bookshelf app */ = {
 			isa = PBXGroup;
 			children = (
+				CFED63402B66714C00EE1633 /* Utils */,
 				CF2C65E72B653D9000BF682B /* Network */,
 				CF2C65E22B6538F300BF682B /* Data */,
 				CF2C65DF2B65379400BF682B /* Domain */,
@@ -156,6 +162,14 @@
 				CF87E0B12B64ECEB00538D88 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFED63402B66714C00EE1633 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CFED63412B6694A200EE1633 /* Collection+Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +252,7 @@
 			files = (
 				CF2C65E92B653DB900BF682B /* GoogleBookApiService.swift in Sources */,
 				CF46BADA2B6629BC00EC0407 /* SetHttpsUseCase.kt.swift in Sources */,
+				CFED633F2B662C2600EE1633 /* GetBookIdUseCase.swift in Sources */,
 				CF2C65DE2B65235400BF682B /* GoogleBookRetrieveApiModel.swift in Sources */,
 				CF2C65E62B653B0F00BF682B /* BooksDataSource.swift in Sources */,
 				CF2C65D22B65128700BF682B /* BookshelfListView.swift in Sources */,
@@ -246,6 +261,7 @@
 				CF2C65DC2B651C9B00BF682B /* GoogleBookApiModel.swift in Sources */,
 				CF2C65E12B65380500BF682B /* GetBooksWithThumbnailUseCase.swift in Sources */,
 				CF46BAD62B65EE9400EC0407 /* BooksRepository.swift in Sources */,
+				CFED63422B6694A200EE1633 /* Collection+Extension.swift in Sources */,
 				CF2C65D92B65158700BF682B /* BookshelfViewModel.swift in Sources */,
 				CF46BAD82B65EF5E00EC0407 /* BookThumbnailDataSource.swift in Sources */,
 				CF87E0AB2B64ECEA00538D88 /* Bookshelf_appApp.swift in Sources */,
