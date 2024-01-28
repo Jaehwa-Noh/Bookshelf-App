@@ -180,3 +180,9 @@ URI: GET https://www.googleapis.com/books/v1/volumes/zyTCAlFPjgYC?key=yourAPIKey
 | Loading (로딩) | Error (오류) | Book List (책 목록) | Load Book Image (책 이미지 불러오기) |
 | :-----------: | :----------: | :----------------: | :--------------------------------: |
 | <img width="200" alt="Loading (로딩)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/6baa89a7-6768-46ab-8064-8bcbe45b6211"> | <img width="200" alt="Error (오류)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/2c833947-7d3b-499c-abda-6ac3b7bf7768"> | <img width="200" alt="Book List (책 목록)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/c3ab5123-4dca-4efa-b85c-eeb9f48f7537"> | <img width="200" alt="Load book image (책 이미지 불러오기)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/50682b22-f99d-4786-891f-88ab816102e2"> |
+
+
+## Problem Solve (문제 해결)
+### SwiftUI (스위프트유아이)
+#### Finding Swift function same as Kotlin invoke function
+• [Finding Swift function same as Kotlin invoke function (Swift에서 코틀린 invoke 함수와 비슷한 함수 찾기](https://shwoghk14.blogspot.com/2024/01/ios-swift-callasfunction.html)
