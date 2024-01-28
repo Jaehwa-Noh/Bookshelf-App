@@ -8,6 +8,13 @@
 import Factory
 
 extension Container {
+    var booksRepository: Factory<BooksRepository> {
+        self {
+            BooksRepository()
+        }
+        .singleton
+    }
+    
     var bookThumbnailDataSource: Factory<BookThumbnailDataSource> {
         self {
             BookThumbnailNetworkDataSource()
@@ -38,6 +45,12 @@ extension Container {
     var userInitiated: Factory<TaskPriority> {
         self {
             .userInitiated
+        }
+    }
+    
+    var background: Factory<TaskPriority> {
+        self {
+            .background
         }
     }
 }
