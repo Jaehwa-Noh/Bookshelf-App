@@ -38,5 +38,26 @@ struct GoogleBookApi: GoogleBookApiService {
         
     }
     
+    func getThumbnail(bookId: String) async throws -> GoogleBookRetrieveApiModel {
+        guard let url else {
+            throw URLError(.badURL)
+        }
+        var getThumbnailUrl = url
+        getThumbnailUrl.append(path: "volumes")
+        getThumbnailUrl.append(path: bookId)
+        
+        let response = await AF.request(getThumbnailUrl)
+            .validate()
+            .serializingDecodable(GoogleBookRetrieveApiModel.self)
+            .response
+        
+        switch response.result {
+        case let .success(data):
+            return data
+        case let .failure(error):
+            throw error
+        }
+    }
+    
     
 }
