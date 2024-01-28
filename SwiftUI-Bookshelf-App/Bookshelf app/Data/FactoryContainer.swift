@@ -8,6 +8,12 @@
 import Factory
 
 extension Container {
+    var setHttpsUseCase: Factory<SetHttpsUseCase> {
+        self {
+            SetHttpsUseCase()
+        }
+    }
+    
     var booksRepository: Factory<BooksRepository> {
         self {
             BooksRepository()
