@@ -15,15 +15,11 @@ struct BooksNetworkDataSource: BooksDataSource {
     @Injected(\.userInitiated) var ioTask
     
     func getBooks(searchTerms: String) async throws -> GoogleBookApiModel {
-        do {
-            return try await Task.detached(priority: ioTask) {
-                do {
-                    return try await googleBookApiService.getBooks(searchTerm: searchTerms)
-                }
-            }.result.get()
-        } catch {
-            throw error
-        }
+        return try await Task.detached(priority: ioTask) {
+            do {
+                return try await googleBookApiService.getBooks(searchTerm: searchTerms)
+            }
+        }.result.get()
     }
     
     

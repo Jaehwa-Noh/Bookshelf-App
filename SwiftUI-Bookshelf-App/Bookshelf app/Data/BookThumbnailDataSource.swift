@@ -16,14 +16,10 @@ struct BookThumbnailNetworkDataSource: BookThumbnailDataSource {
     @Injected(\.userInitiated) var ioTask
     
     func getThumbnails(bookId: String) async throws -> GoogleBookRetrieveApiModel {
-        do {
-            return try await Task.detached(priority: ioTask) {
-                do {
-                    return try await  googleBookApiService.getThumbnail(bookId: bookId)
-                }
-            }.result.get()
-        } catch {
-            throw error
-        }
+        return try await Task.detached(priority: ioTask) {
+            do {
+                return try await  googleBookApiService.getThumbnail(bookId: bookId)
+            }
+        }.result.get()
     }
 }
