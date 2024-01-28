@@ -8,6 +8,18 @@
 import Factory
 
 extension Container {
+    var getBooksWithThumbnailUseCase: Factory<GetBooksWithThumbnailUseCase> {
+        self {
+            GetBooksWithThumbnailUseCase()
+        }
+    }
+    
+    var getBooIdUseCase: Factory<GetBookIdUseCase> {
+        self {
+            GetBookIdUseCase()
+        }
+    }
+    
     var setHttpsUseCase: Factory<SetHttpsUseCase> {
         self {
             SetHttpsUseCase()
