@@ -30,6 +30,7 @@ struct BookshelfListView: View {
                             image.resizable()
                         } placeholder: {
                             ProgressView()
+                                .frame(maxWidth: .infinity, maxHeight: 250)
                         }
                         .frame(height: 250)
                     }
