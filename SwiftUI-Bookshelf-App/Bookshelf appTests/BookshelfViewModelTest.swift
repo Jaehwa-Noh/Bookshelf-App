@@ -52,7 +52,7 @@ final class BookshelfViewModelTest: XCTestCase {
     
     func test_BookshelfViewModelTest_getBook_BookUiStateValueCheckSuccess() async throws {
         try await waitLoadData()
-        guard case let .success(books: books) = bookshelfViewModel!.bookShelfUiState else {
+        guard case .success(books: _) = bookshelfViewModel!.bookShelfUiState else {
             XCTFail()
             return
         }
