@@ -46,7 +46,7 @@ enum BookshelfUiState {
     case error(String)
 }
 
-struct BookshelfUiModel {
+struct BookshelfUiModel: Hashable {
     let id: String
     let title: String
     let url: String
