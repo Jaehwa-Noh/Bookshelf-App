@@ -19,10 +19,9 @@ struct GetBooksWithThumbnailUseCase {
             
             let uiBooks: [BookshelfUiModel] = try await books.items.asyncMap { bookModel in
                 let bookId = try await getBookIdUseCase(url: bookModel.selfLink)
-                let thumbnail = try await booksRepository.getThumbnail(bookId: bookId).volumeInfo.imageLinks?.thumbnail ?? ""
-                
+                var thumbnail = try await booksRepository.getThumbnail(bookId: bookId).volumeInfo.imageLinks?.thumbnail ?? ""
+                thumbnail = await setHttpsUseCase(url: thumbnail)
                 return BookshelfUiModel(id: bookModel.id, title: bookModel.volumeInfo.title, url: thumbnail)
-                
             }
             
             return uiBooks
