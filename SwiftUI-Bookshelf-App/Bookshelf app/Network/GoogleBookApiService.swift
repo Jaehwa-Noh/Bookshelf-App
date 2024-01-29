@@ -25,7 +25,9 @@ struct GoogleBookApi: GoogleBookApiService {
         getBooksUrl.append(path: "volumes")
         getBooksUrl.append(queryItems: [URLQueryItem(name: "q", value: searchTerm)])
         
-        let response = await AF.request(getBooksUrl)
+        let response = await AF.request(getBooksUrl, requestModifier: {
+            $0.timeoutInterval = 12
+        })
             .validate()
             .serializingDecodable(GoogleBookApiModel.self)
             .response
