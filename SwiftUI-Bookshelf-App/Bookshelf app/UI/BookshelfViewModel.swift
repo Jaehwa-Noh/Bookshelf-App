@@ -6,10 +6,32 @@
 //
 
 import SwiftUI
+import Factory
+import Alamofire
 
 class BookshelfViewModel: ObservableObject {
     @Published var bookShelfUiState: BookshelfUiState = .loading
+    @Injected(\.getBooksWithThumbnailUseCase) var getBooksWithThumbnailUseCase
     
+    init() {
+        getBooks()
+    }
+    
+    func getBooks() {
+        Task {
+            bookShelfUiState = .loading
+            do {
+                bookShelfUiState = .success(try await getBooksWithThumbnailUseCase(searchTerms: "다이아몬드는 개똥밭에 굴러도 다이아몬드이다."))
+                print("success")
+            } catch URLError.badURL {
+                print("error1")
+                bookShelfUiState = .error("Bad Url")
+            } catch {
+                print("error2 \(error)")
+                bookShelfUiState = .error(error.localizedDescription)
+            }
+        }
+    }
 }
 
 enum BookshelfUiState {
