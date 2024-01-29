@@ -29,5 +29,5 @@ struct GoogleBookItemsModel: Decodable {
 
 struct VolumeInfoModel: Decodable {
     let title: String
-    let authors: [String]
+    let authors: [String]?
 }
