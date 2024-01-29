@@ -19,13 +19,22 @@ class BookshelfViewModel: ObservableObject {
     
     func getBooks() {
         Task {
-            bookShelfUiState = .loading
+            await MainActor.run {
+                bookShelfUiState = .loading
+            }
             do {
-                bookShelfUiState = .success(try await getBooksWithThumbnailUseCase(searchTerms: "다이아몬드는 개똥밭에 굴러도 다이아몬드이다."))
+                let result: BookshelfUiState = .success(try await getBooksWithThumbnailUseCase(searchTerms: "다이아몬드는 개똥밭에 굴러도 다이아몬드이다."))
+                await MainActor.run {
+                    bookShelfUiState = result
+                }
             } catch URLError.badURL {
-                bookShelfUiState = .error("Bad Url")
+                await MainActor.run {
+                    bookShelfUiState = .error("Bad Url")
+                }
             } catch {
-                bookShelfUiState = .error(error.localizedDescription)
+                await MainActor.run {
+                    bookShelfUiState = .error(error.localizedDescription)
+                }
             }
         }
     }
