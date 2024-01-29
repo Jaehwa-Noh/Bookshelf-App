@@ -28,6 +28,7 @@
 		CF87E0B22B64ECEB00538D88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF87E0B12B64ECEB00538D88 /* Preview Assets.xcassets */; };
 		CFAE93C72B678AD300E15C6F /* BooksFakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE93C62B678AD300E15C6F /* BooksFakeDataSource.swift */; };
 		CFAE93C92B678D3500E15C6F /* ThumbnailFakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE93C82B678D3500E15C6F /* ThumbnailFakeDataSource.swift */; };
+		CFAE93CD2B67946E00E15C6F /* BookshelfViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE93CC2B67946E00E15C6F /* BookshelfViewModelTest.swift */; };
 		CFED633F2B662C2600EE1633 /* GetBookIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFED633E2B662C2600EE1633 /* GetBookIdUseCase.swift */; };
 		CFED63422B6694A200EE1633 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFED63412B6694A200EE1633 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		CFAE93BC2B6780C500E15C6F /* Bookshelf appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bookshelf appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAE93C62B678AD300E15C6F /* BooksFakeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksFakeDataSource.swift; sourceTree = "<group>"; };
 		CFAE93C82B678D3500E15C6F /* ThumbnailFakeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailFakeDataSource.swift; sourceTree = "<group>"; };
+		CFAE93CC2B67946E00E15C6F /* BookshelfViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfViewModelTest.swift; sourceTree = "<group>"; };
 		CFED633E2B662C2600EE1633 /* GetBookIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookIdUseCase.swift; sourceTree = "<group>"; };
 		CFED63412B6694A200EE1633 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				CFAE93C52B6788DC00E15C6F /* Fake */,
+				CFAE93CC2B67946E00E15C6F /* BookshelfViewModelTest.swift */,
 			);
 			path = "Bookshelf appTests";
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			files = (
 				CFAE93C92B678D3500E15C6F /* ThumbnailFakeDataSource.swift in Sources */,
 				CFAE93C72B678AD300E15C6F /* BooksFakeDataSource.swift in Sources */,
+				CFAE93CD2B67946E00E15C6F /* BookshelfViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
