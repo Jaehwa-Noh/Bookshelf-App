@@ -32,6 +32,7 @@
 		CFAE93CF2B67CD9100E15C6F /* GetBookIdUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE93CE2B67CD9100E15C6F /* GetBookIdUseCaseTest.swift */; };
 		CFAE93D12B67CDA400E15C6F /* GetBooksWithThumbnailsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE93D02B67CDA400E15C6F /* GetBooksWithThumbnailsUseCaseTest.swift */; };
 		CFAE93D32B67CDB700E15C6F /* SetHttpsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE93D22B67CDB700E15C6F /* SetHttpsUseCaseTest.swift */; };
+		CFAE93D52B67D1D800E15C6F /* BookshelfAppScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE93D42B67D1D800E15C6F /* BookshelfAppScreenTest.swift */; };
 		CFED633F2B662C2600EE1633 /* GetBookIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFED633E2B662C2600EE1633 /* GetBookIdUseCase.swift */; };
 		CFED63422B6694A200EE1633 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFED63412B6694A200EE1633 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		CFAE93CE2B67CD9100E15C6F /* GetBookIdUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookIdUseCaseTest.swift; sourceTree = "<group>"; };
 		CFAE93D02B67CDA400E15C6F /* GetBooksWithThumbnailsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBooksWithThumbnailsUseCaseTest.swift; sourceTree = "<group>"; };
 		CFAE93D22B67CDB700E15C6F /* SetHttpsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHttpsUseCaseTest.swift; sourceTree = "<group>"; };
+		CFAE93D42B67D1D800E15C6F /* BookshelfAppScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfAppScreenTest.swift; sourceTree = "<group>"; };
 		CFED633E2B662C2600EE1633 /* GetBookIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookIdUseCase.swift; sourceTree = "<group>"; };
 		CFED63412B6694A200EE1633 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +218,7 @@
 		CFAE93AE2B677C8E00E15C6F /* Bookshelf appUITests */ = {
 			isa = PBXGroup;
 			children = (
+				CFAE93D42B67D1D800E15C6F /* BookshelfAppScreenTest.swift */,
 			);
 			path = "Bookshelf appUITests";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 					};
 					CFAE93AC2B677C8E00E15C6F = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = CF87E0A62B64ECEA00538D88;
 					};
 					CFAE93BB2B6780C500E15C6F = {
@@ -412,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAE93D52B67D1D800E15C6F /* BookshelfAppScreenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +631,7 @@
 		CFAE93B52B677C8E00E15C6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H64278R9T;
@@ -634,6 +640,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "example.sample.Bookshelf-appUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Bookshelf app";
@@ -643,6 +650,7 @@
 		CFAE93B62B677C8E00E15C6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H64278R9T;
