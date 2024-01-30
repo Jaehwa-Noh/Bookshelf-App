@@ -7,7 +7,7 @@ This main branch is the main directory.
 There are 2 branchs for 1 practice, Compose and SwiftUI.   
    
 • [Compose branch](https://github.com/Jaehwa-Noh/Project-Bookshelf-App/tree/compose-bookshelf-app)   
-• [SwiftUI branch]   
+• [SwiftUI branch](https://github.com/Jaehwa-Noh/Project-Bookshelf-App/tree/swiftui-bookshelf-app)   
 
 
 ---
@@ -18,7 +18,7 @@ There are 2 branchs for 1 practice, Compose and SwiftUI.
 1개의 연습에 컴포즈와 스위프트유아이 2개의 브랜치가 있습니다.   
    
 • [컴포즈 브랜치](https://github.com/Jaehwa-Noh/Project-Bookshelf-App/tree/compose-bookshelf-app)   
-• [스위프트유아이 브랜치]   
+• [스위프트유아이 브랜치](https://github.com/Jaehwa-Noh/Project-Bookshelf-App/tree/swiftui-bookshelf-app)   
 
 
 ## Bookshelf App (책장 앱)
@@ -180,3 +180,13 @@ URI: GET https://www.googleapis.com/books/v1/volumes/zyTCAlFPjgYC?key=yourAPIKey
 | Loading (로딩) | Error (오류) | Book List (책 목록) | Load Book Image (책 이미지 불러오기) |
 | :-----------: | :----------: | :----------------: | :--------------------------------: |
 | <img width="200" alt="Loading (로딩)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/6baa89a7-6768-46ab-8064-8bcbe45b6211"> | <img width="200" alt="Error (오류)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/2c833947-7d3b-499c-abda-6ac3b7bf7768"> | <img width="200" alt="Book List (책 목록)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/c3ab5123-4dca-4efa-b85c-eeb9f48f7537"> | <img width="200" alt="Load book image (책 이미지 불러오기)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/50682b22-f99d-4786-891f-88ab816102e2"> |
+
+### SwiftUI (스위프트유아이)
+| Loading (로딩) | Error (오류) | Book List (책 목록) | Load Book Image (책 이미지 불러오기) |
+| :-----------: | :----------: | :----------------: | :--------------------------------: |
+| <img width="200" alt="Loading (로딩)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/7dafebb9-8931-45fe-a692-0276728a61bf"> | <img width="200" alt="Error (오류)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/d212ad34-657b-4781-bd18-8576b9dedfcb"> | <img width="200" alt="Book List (책 목록)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/7dafebb9-8931-45fe-a692-0276728a61bf"> | <img width="200" alt="Load book image (책 이미지 불러오기)" src="https://github.com/Jaehwa-Noh/Project-Bookshelf-App/assets/48680511/66c55f34-0616-4639-98b2-92fa9b55d3f3"> |
+
+## Problem Solve (문제 해결)
+### SwiftUI (스위프트유아이)
+#### Finding Swift function same as Kotlin invoke function
+• [Finding Swift function same as Kotlin invoke function (Swift에서 코틀린 invoke 함수와 비슷한 함수 찾기](https://shwoghk14.blogspot.com/2024/01/ios-swift-callasfunction.html)
